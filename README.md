@@ -14,4 +14,3 @@ const result =
        ],
    // ...etc.
  }
-#experiment_data_code_challenge

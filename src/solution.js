@@ -25,7 +25,7 @@ const experimentData = [
 
 function solution(data) {
 
-    let newData = {}
+    let result = {}
 
     for (obj of data) {
         let newKey = obj['vesselId']
@@ -36,9 +36,9 @@ function solution(data) {
             cellCount: cellCount
             }
         ]
-        newData[newKey] = values;
+        result[newKey] = values;
     }
-    return newData;
+    console.log(result);
 }
 
 solution(experimentData);
