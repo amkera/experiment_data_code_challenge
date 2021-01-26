@@ -24,9 +24,7 @@ const experimentData = [
 ];
 
 function solution(data) {
-
-    let result = {}
-
+    let preliminaryResult = {}
     for (obj of data) {
         let newKey = obj['vesselId']
         let time = obj.time
@@ -36,9 +34,12 @@ function solution(data) {
             cellCount: cellCount
             }
         ]
-        result[newKey] = values;
+        preliminaryResult[newKey] = values;
     }
-    console.log(result);
+    let entries = Object.entries(preliminaryResult);
+    let timeSorted = entries.sort((a, b) => b.time - a.time)
+    console.log(timeSorted);
+    return timeSorted;
 }
 
 solution(experimentData);
